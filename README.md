@@ -29,15 +29,29 @@ python busca.py
 | [`busca.py`](busca.py) | BFS, registro dos pais e reconstrução do caminho. |
 | [`maze.py`](maze.py) | Animação da busca, legenda e controles. |
 
-## Como funciona
+## 1. Conceito Fundamental
 
-A BFS usa uma **fila FIFO**: o primeiro estado que entra é o primeiro a sair.
-Assim, explora por camadas: início, posições a 1 movimento, a 2 e assim por
-diante. Se existisse um caminho mais curto até a saída, ela seria alcançada
-numa camada anterior. Por isso, a BFS encontra o menor número de movimentos.
+A Busca em Largura (Breadth-First Search – BFS) é um algoritmo de exploração não informada que opera varrendo o espaço de estados em camadas.
 
-Neste labirinto, cada movimento custa 1: menos movimentos também significa
-menor custo. Com custos diferentes, a BFS não garante o menor custo total.
+* **Busca Não Informada (Cega):**  O algoritmo conhece estritamente o estado inicial e as regras de movimento válidas.
+* **Exploração por Camadas:** Vasculha o cenário de forma sistemática por níveis de distância. Examina absolutamente todos os nós a uma distância *k* da raiz antes de avançar para qualquer nó a uma distância *k+1*.
+
+## 2. Estrutura e Comportamento
+
+Para garantir o mapeamento perfeito e evitar falhas de execução, o algoritmo apoia-se em três pilares:
+
+* **Fila FIFO (First-In, First-Out):** A estrutura de dados que dita a ordem da operação. O primeiro nó a entrar na lista de espera é obrigatoriamente o primeiro a ser processado e expandido.
+* **Conjunto de Visitados:** Um registro de memória com todos os estados já mapeados. É o mecanismo de segurança que impede o algoritmo de andar em círculos (*loops* infinitos) caso o grafo possua caminhos cruzados.
+* **Laço de Repetição:** O ciclo lógico que mantém o algoritmo rodando. Ele repete continuamente a ação de puxar o próximo nó da Fila, verificar se é a saída e enfileirar os próximos passos possíveis.
+
+## 3. Fluxo de Funcionamento do Método de Busca
+
+O passo a passo lógico do BFS divide-se em quatro etapas. O primeiro passo serve apenas para preparar o terreno, enquanto o **funcionamento ativo (o ciclo contínuo do algoritmo)** começa realmente a partir da segunda etapa:
+
+1. **Inicialização (Preparação):** Insere o nó de origem (raiz) na fila FIFO e já o marca como "visitado".
+2. **Iteração (Início do Motor/Loop):** Remove o nó que está na frente da fila e aplica o teste de meta para verificar se ele é o objetivo final.
+3. **Expansão:** Se o nó atual não for a meta, o algoritmo mapeia todos os seus sucessores válidos (os próximos passos possíveis) que ainda não constam no conjunto de visitados.
+4. **Enfileiramento:** Coloca estes novos nós no final da fila FIFO e repete o ciclo voltando obrigatoriamente para o passo 2, até que a meta seja encontrada.
 
 **Aplicação:** Um exemplo da aplicação desse método de busca é a lógica de sugestão de amizades em redes sociais, como o LinkedIn ou o Facebook. 
 
