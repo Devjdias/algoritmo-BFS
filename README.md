@@ -53,7 +53,7 @@ O passo a passo lógico do BFS divide-se em quatro etapas. O primeiro passo serv
 3. **Expansão:** Se o nó atual não for a meta, o algoritmo mapeia todos os seus sucessores válidos (os próximos passos possíveis) que ainda não constam no conjunto de visitados.
 4. **Enfileiramento:** Coloca estes novos nós no final da fila FIFO e repete o ciclo voltando obrigatoriamente para o passo 2, até que a meta seja encontrada.
 
-<img src="./BFS_Tree.gif" alt="Demonstração do BFS" width="624">
+<p align="center"><img src="./BFS_Tree.gif" alt="Demonstração do BFS" width="624"></p>
 
 **Aplicação:** Um exemplo da aplicação desse método de busca é a lógica de sugestão de amizades em redes sociais, como o LinkedIn ou o Facebook. 
 
