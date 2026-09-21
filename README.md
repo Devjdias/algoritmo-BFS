@@ -39,11 +39,10 @@ numa camada anterior. Por isso, a BFS encontra o menor número de movimentos.
 Neste labirinto, cada movimento custa 1: menos movimentos também significa
 menor custo. Com custos diferentes, a BFS não garante o menor custo total.
 
-**Aplicação:** planejar a rota de um robô em uma grade com obstáculos e
-movimentos de mesmo custo.
+**Aplicação:** Um exemplo da aplicação desse método de busca é a lógica de sugestão de amizades em redes sociais, como o LinkedIn ou o Facebook. 
 
-**Vantagem:** garante um caminho com o menor número de movimentos.
-**Limitação:** pode consumir muita memória ao guardar as células descobertas.
+**Vantagem:** Garante encontrar o caminho com o menor número de movimentos.
+**Limitação:** É o consumo exponencial de memória RAM, pois a obrigação de guardar todas as ramificações abertas em simultâneo pode esgotar o sistema em mapas muito grandes.
 
 ## Resultado do mapa atual
 
