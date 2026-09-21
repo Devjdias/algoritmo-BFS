@@ -53,6 +53,10 @@ O passo a passo lógico do BFS divide-se em quatro etapas. O primeiro passo serv
 3. **Expansão:** Se o nó atual não for a meta, o algoritmo mapeia todos os seus sucessores válidos (os próximos passos possíveis) que ainda não constam no conjunto de visitados.
 4. **Enfileiramento:** Coloca estes novos nós no final da fila FIFO e repete o ciclo voltando obrigatoriamente para o passo 2, até que a meta seja encontrada.
 
+**Vantagem:** Garante encontrar o caminho com o menor número de movimentos.
+
+**Limitação:** É o consumo exponencial de memória RAM, pois a obrigação de guardar todas as ramificações abertas em simultâneo pode esgotar o sistema em mapas muito grandes.
+
 <p align="center"><img src="./BFS_Tree.gif" alt="Demonstração do BFS" width="624"></p>
 
 ## 4. O BFS na Inteligência Artificial e Sistema Complexo
@@ -62,10 +66,6 @@ Na Inteligência Artificial, o BFS é utilizado quando a prioridade absoluta de 
 Aplicação prática do algoritmo:
 
 * **Sistemas de Recomendação (Redes Sociais):** O BFS estrutura o mapeamento de conexões (amigos de amigos). Para evitar o estouro de memória com bilhões de dados, algoritmos de IA são aplicados junto ao BFS para filtrar e processar apenas os contatos com maior probabilidade estatística de afinidade.
-
-**Vantagem:** Garante encontrar o caminho com o menor número de movimentos.
-
-**Limitação:** É o consumo exponencial de memória RAM, pois a obrigação de guardar todas as ramificações abertas em simultâneo pode esgotar o sistema em mapas muito grandes.
 
 ## Resultado do mapa atual
 
