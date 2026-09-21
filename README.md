@@ -55,9 +55,16 @@ O passo a passo lógico do BFS divide-se em quatro etapas. O primeiro passo serv
 
 <p align="center"><img src="./BFS_Tree.gif" alt="Demonstração do BFS" width="624"></p>
 
-**Aplicação:** Um exemplo da aplicação desse método de busca é a lógica de sugestão de amizades em redes sociais, como o LinkedIn ou o Facebook. 
+## 4. O BFS na Inteligência Artificial e Sistemas Complexos
 
-**Vantagem:** Garante encontrar o caminho com o menor número de movimentos.
+Na Inteligência Artificial, o BFS é utilizado quando a prioridade absoluta de um sistema é garantir a "solução ótima" (o caminho mais curto) em estruturas de grande escala.
+
+Aplicação prática do algoritmo:
+
+* **Sistemas de Recomendação (Redes Sociais):** O BFS estrutura o mapeamento de conexões (amigos de amigos). Para evitar o estouro de memória com bilhões de dados, algoritmos de IA são aplicados junto ao BFS para filtrar e processar apenas os contatos com maior probabilidade estatística de afinidade.
+
+* **Vantagem:** Garante encontrar o caminho com o menor número de movimentos.
+
 **Limitação:** É o consumo exponencial de memória RAM, pois a obrigação de guardar todas as ramificações abertas em simultâneo pode esgotar o sistema em mapas muito grandes.
 
 ## Resultado do mapa atual
